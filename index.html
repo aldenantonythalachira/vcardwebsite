@@ -3,52 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vcard Download</title>
+  <title>Download Vcard App</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #F4F4F4;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #e0e7ff 0%, #f4f4f4 100%);
+      min-height: 100vh;
+      margin: 0;
       display: flex;
-      height: 100vh;
       align-items: center;
       justify-content: center;
     }
     .container {
+      background: #fff;
+      padding: 2.5rem 2rem;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(80, 80, 180, 0.12);
       text-align: center;
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      max-width: 350px;
+      width: 100%;
+      animation: fadeIn 0.7s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    h1 {
+      font-size: 2rem;
+      color: #3730a3;
+      margin-bottom: 0.5rem;
+      letter-spacing: -1px;
+    }
+    p {
+      color: #555;
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+    }
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
     }
     .download-btn {
       display: inline-block;
-      padding: 14px 28px;
-      background-color: #007BFF;
-      color: white;
-      font-size: 16px;
+      padding: 0.9rem 2rem;
+      background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+      color: #fff;
+      font-size: 1.08rem;
+      font-weight: 600;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       text-decoration: none;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+      transition: background 0.2s, transform 0.2s;
     }
-    .download-btn:hover {
-      background-color: #0056B3;
+    .download-btn:hover, .download-btn:focus {
+      background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 100%);
+      transform: translateY(-2px) scale(1.03);
+      outline: none;
+    }
+    @media (max-width: 500px) {
+      .container {
+        padding: 1.5rem 0.5rem;
+        max-width: 95vw;
+      }
+      h1 { font-size: 1.3rem; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Download Our Vcard App! :)</h1>
-    <p>Click the button below to download the latest version of our app.</p>
-    <a class="download-btn" href="application-dcc458c8-8634-4a3a-89a9-842fa3756980.aab" download>Download .AAB File</a>
-    <a class="download-btn" 
-   href="https://aldenantony.netlify.app" 
-   target="_blank" 
-   rel="noopener noreferrer">
-  Vcard Website
-</a>
-
+    <h1>Download Our Vcard App!</h1>
+    <p>Get the latest version of our app for Android. Click below to download the .AAB file or visit our website.</p>
+    <div class="btn-group">
+      <a class="download-btn" href="application-dcc458c8-8634-4a3a-89a9-842fa3756980.aab" download>
+        Download .AAB File
+      </a>
+      <a class="download-btn" 
+         href="https://aldenantony.netlify.app" 
+         target="_blank" 
+         rel="noopener noreferrer">
+        Visit Vcard Website
+      </a>
+    </div>
   </div>
 </body>
 </html>
